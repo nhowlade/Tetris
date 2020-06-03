@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             moveLeft();
         } else if (e.keyCode == 38)
         {
-            //rotate
+            rotate();
         } else if (e.keyCode == 39)
         {
             moveRight();
@@ -134,6 +134,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if(current.some(index => squares[currentPosition + index].classList.contains('taken'))){
             currentPosition -= 1;
         }
+        draw();
+    }
+
+    function rotate()
+    {
+        undraw();
+        currentRotation ++ ;
+        if(currentRotation == current.length)
+        {
+            currentRotation = 0; // this is to say if we hit the entire rotation array we will move to the first index
+        }
+        current = theTetriminoes[random][currentRotation];
         draw();
     }
 })
