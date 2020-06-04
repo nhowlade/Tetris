@@ -7,47 +7,49 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerId;
     let nextRandom = 0;
      let score = 0;
-    //The Tetreminos
-    const lTetremino = [
+
+     const lTetromino = [
         [1, width+1, width*2+1, 2],
         [width, width+1, width+2, width*2+2],
         [1, width+1, width*2+1, width*2],
         [width, width*2, width*2+1, width*2+2]
-    ]
-
-    const zTetremino = [
-        [width*2, width+1, width*2+1, width+2],
-        [0, width, width+1, width*2+1],
-        [width*2, width+1, width*2+1, width+2],
-        [0, width, width+1, width*2+1]
-    ]
-
-    const tTetremino = [
-        [width, 1, width+1, width+2],
-        [1, width+1, width*2+1, width+2],
-        [width, width+1, width*2+1, width+2],
-        [width, 1, width+1, width*2+1]
-    ]
-
-    const oTetrimino =[
-        [0, width, 1, width+1],
-        [0, width, 1, width+1],
-        [0, width, 1, width+1],
-        [0, width, 1, width+1]
-    ]
-
-    const iTetremino = [
-        [1, width+1, width*2+1, width*3+1],
-        [width, width+1, width+2, width+3],
-        [1, width+1, width*2+1, width*3+1],
-        [width, width+1, width+2, width+3]
-    ]
+      ]
+    
+      const zTetromino = [
+        [0,width,width+1,width*2+1],
+        [width+1, width+2,width*2,width*2+1],
+        [0,width,width+1,width*2+1],
+        [width+1, width+2,width*2,width*2+1]
+      ]
+    
+      const tTetromino = [
+        [1,width,width+1,width+2],
+        [1,width+1,width+2,width*2+1],
+        [width,width+1,width+2,width*2+1],
+        [1,width,width+1,width*2+1]
+      ]
+    
+      const oTetromino = [
+        [0,1,width,width+1],
+        [0,1,width,width+1],
+        [0,1,width,width+1],
+        [0,1,width,width+1]
+      ]
+    
+      const iTetromino = [
+        [1,width+1,width*2+1,width*3+1],
+        [width,width+1,width+2,width+3],
+        [1,width+1,width*2+1,width*3+1],
+        [width,width+1,width+2,width+3]
+      ]
 
     const theTetriminoes = [lTetremino, zTetremino, tTetremino, oTetrimino, iTetremino];
     //randomly select a tetrimono
-    let random = Math.floor(Math.random()*theTetriminoes.length);
+    
     let currentPosition = 4;
     let currentRotation = 0;
+
+    let random = Math.floor(Math.random()*theTetriminoes.length);
     let current = theTetriminoes[random][currentRotation];
 
     //draew the first rotation of a tetrimino
@@ -115,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function moveLeft(){
         undraw();
-        const isAtLeftEdge = current.some(index => (currentPosition + index) % width == 0)
+        const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
         if(!isAtLeftEdge)
         {
             currentPosition -= 1;
@@ -155,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const displaySquares = document.querySelectorAll('.mini-grid div');
     const displayWidth = 4;
-    let displayIndex = 0;
+    let displayIndex = 0;``
 
     const upNextTetriminoes = [
         [1, displayWidth+1, displayWidth*2+1, 2],
