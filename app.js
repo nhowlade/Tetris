@@ -169,10 +169,10 @@ document.addEventListener('DOMContentLoaded', () => {
     {
         displaySquares.forEach(square => {
             square.classList.remove('tetrimino')
-        });
+        })
         upNextTetriminoes[nextRandom].forEach(index => {
             displaySquares[displayIndex + index].classList.add('tetrimino')
-        });
+        })
     }
 
     startBtn.addEventListener('click', () => {
