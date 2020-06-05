@@ -8,42 +8,42 @@ document.addEventListener('DOMContentLoaded', () => {
     let nextRandom = 0;
      let score = 0;
 
-     const lTetromino = [
+     const lTetremino = [
         [1, width+1, width*2+1, 2],
         [width, width+1, width+2, width*2+2],
         [1, width+1, width*2+1, width*2],
         [width, width*2, width*2+1, width*2+2]
       ]
     
-      const zTetromino = [
+      const zTetremino = [
         [0,width,width+1,width*2+1],
         [width+1, width+2,width*2,width*2+1],
         [0,width,width+1,width*2+1],
         [width+1, width+2,width*2,width*2+1]
       ]
     
-      const tTetromino = [
+      const tTetremino = [
         [1,width,width+1,width+2],
         [1,width+1,width+2,width*2+1],
         [width,width+1,width+2,width*2+1],
         [1,width,width+1,width*2+1]
       ]
     
-      const oTetromino = [
+      const oTetremino = [
         [0,1,width,width+1],
         [0,1,width,width+1],
         [0,1,width,width+1],
         [0,1,width,width+1]
       ]
     
-      const iTetromino = [
+      const iTetremino = [
         [1,width+1,width*2+1,width*3+1],
         [width,width+1,width+2,width+3],
         [1,width+1,width*2+1,width*3+1],
         [width,width+1,width+2,width+3]
       ]
 
-    const theTetriminoes = [lTetremino, zTetremino, tTetremino, oTetrimino, iTetremino];
+    const theTetriminoes = [lTetrmino, zTetremino, tTetremino, oTetrimino, iTetremino];
     //randomly select a tetrimono
     
     let currentPosition = 4;
