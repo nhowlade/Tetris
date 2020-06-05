@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         [width,width+1,width+2,width+3]
       ]
 
-    const theTetriminoes = [lTetrmino, zTetremino, tTetremino, oTetrimino, iTetremino];
+    const theTetriminoes = [lTetremino, zTetremino, tTetremino, oTetremino, iTetremino];
     //randomly select a tetrimono
     
     let currentPosition = 4;
@@ -57,13 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function draw()
     {
         current.forEach(index => {
-            squares[currentPosition + index].classList.add('tetrimino');
+            squares[currentPosition + index].classList.add('tetremino');
         })
     }
 
     function undraw() {
         current.forEach(index => {
-            squares[currentPosition+index].classList.remove('tetrimino');
+            squares[currentPosition+index].classList.remove('tetremino');
         })
     }
 
@@ -170,10 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayShape()
     {
         displaySquares.forEach(square => {
-            square.classList.remove('tetrimino')
+            square.classList.remove('tetremino')
         })
         upNextTetriminoes[nextRandom].forEach(index => {
-            displaySquares[displayIndex + index].classList.add('tetrimino')
+            displaySquares[displayIndex + index].classList.add('tetremino')
         })
     }
 
