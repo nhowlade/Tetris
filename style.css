@@ -6,7 +6,7 @@
     height: 400px;
     display: flex;
     flex-wrap: wrap;
-    background-color: yellow;
+    background-color: pink;
 }
 
 .grid div {
@@ -14,7 +14,7 @@
     width: 20px;
 }
 
-.tetrimino
+.tetremino
 {
     background-color: green;
 }
