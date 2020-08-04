@@ -1,34 +1,33 @@
 .container {
-    display: flex;
+  display: flex;
 }
 .grid {
-    width: 200px;
-    height: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: pink;
+  width: 200px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: pink;
 }
 
 .grid div {
-    height: 20px;
-    width: 20px;
+  height: 20px;
+  width: 20px;
 }
 
-.tetremino
-{
-    background-color: green;
+.tetremino {
+  background-color: orangered;
 }
 
 .mini-grid {
-    margin-left: 50px;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: blueviolet;
+  margin-left: 50px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: blueviolet;
 }
 
 .mini-grid div {
-    height: 20px;
-    width: 20px;
+  height: 20px;
+  width: 20px;
 }
