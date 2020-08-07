@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let timerId;
     let nextRandom = 0;
     let score = 0;
+    const colors = ["orange", "red", "purple", "green", "blue"];
 
     const lTetremino = [
         [1, width + 1, width * 2 + 1, 2],
@@ -63,12 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
     function draw() {
         current.forEach((index) => {
             squares[currentPosition + index].classList.add("tetremino");
+            squares[currentPosition + index].style.backgroundColor =
+                colors[random];
         });
     }
 
     function undraw() {
         current.forEach((index) => {
             squares[currentPosition + index].classList.remove("tetremino");
+            squares[currentPosition + index].style.backgroundColor = "";
         });
     }
 
@@ -180,9 +184,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function displayShape() {
         displaySquares.forEach((square) => {
             square.classList.remove("tetremino");
+            square.style.backgroundColor = "";
         });
         upNextTetriminoes[nextRandom].forEach((index) => {
             displaySquares[displayIndex + index].classList.add("tetremino");
+            displaySquares[displayIndex + index].style.backgroundColor =
+                colors[nextRandom];
         });
     }
 
@@ -221,6 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 row.forEach((index) => {
                     squares[index].classList.remove("taken");
                     squares[index].classList.remove("tetremino");
+                    squares[index].style.backgroundColor = "";
                 });
                 const squaresRemoved = squares.splice(i, width);
                 squares = squaresRemoved.concat(squares);
