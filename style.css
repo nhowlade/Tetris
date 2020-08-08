@@ -1,5 +1,17 @@
+.score-tag {
+    display: flex;
+    justify-content: center;
+    transform: translate(-350px, 60px);
+}
 .container {
     display: flex;
+    justify-content: center;
+    transform: translateY(80px);
+}
+
+#start-button {
+    display: flex;
+    transform: translate(570px, 50px);
 }
 .grid {
     width: 200px;
